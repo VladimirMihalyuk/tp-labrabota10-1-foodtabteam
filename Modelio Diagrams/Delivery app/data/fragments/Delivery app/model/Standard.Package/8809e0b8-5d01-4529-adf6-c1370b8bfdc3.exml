@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Dishes Menu" version="4">
+  <OBJECT>
+    <ID name="Dishes Menu" mc="Standard.Package" uid="8809e0b8-5d01-4529-adf6-c1370b8bfdc3"/>
+    <PID name="Class Diagrams" mc="Standard.Package" uid="42289480-53e3-49b4-93d7-3ce2e1c75075"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Dishes Menu]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="DishItem" mc="Standard.Class" uid="9fd3a79f-fbe4-4707-a814-60ecb2db0948"/>
+        <COMPID name="DishMenuViewController" mc="Standard.Class" uid="7d56fca4-6fa5-41f3-8015-b3a9fe8a7653"/>
+        <COMPID name="DishCollectionViewCell" mc="Standard.Class" uid="3e3f7f47-cfc0-4789-9122-cfd031b086d1"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Dishes Menu" mc="Standard.ClassDiagram" uid="62041bb1-8f60-4a75-9f38-7cb34d33a2b2"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Dish Details" version="4">
+  <OBJECT>
+    <ID name="Dish Details" mc="Standard.Package" uid="9f33ea99-04d0-485f-a27e-3343624e59da"/>
+    <PID name="Class Diagrams" mc="Standard.Package" uid="42289480-53e3-49b4-93d7-3ce2e1c75075"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Dish Details]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="DishDetailsViewController" mc="Standard.Class" uid="be8fe6bd-1d67-4e5f-964d-f6c261085a2c"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Dish Details" mc="Standard.ClassDiagram" uid="0762c0c6-4056-4928-ae43-b586a2f2aee5"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Payment" version="4">
+  <OBJECT>
+    <ID name="Payment" mc="Standard.Package" uid="22358939-ae12-46d7-9353-7862c3f823d2"/>
+    <PID name="Class Diagrams" mc="Standard.Package" uid="42289480-53e3-49b4-93d7-3ce2e1c75075"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Payment]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="PaymentViewController" mc="Standard.Class" uid="1d1d263f-8f02-493e-b4bc-d4f71ffdbf07"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Payment" mc="Standard.ClassDiagram" uid="ca3bc450-90b6-48a5-b0eb-f74ab0328963"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

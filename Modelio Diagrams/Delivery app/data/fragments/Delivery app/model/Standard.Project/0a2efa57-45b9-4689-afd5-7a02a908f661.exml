@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Delivery app" version="4">
+  <OBJECT>
+    <ID name="Delivery app" mc="Standard.Project" uid="0a2efa57-45b9-4689-afd5-7a02a908f661"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[Delivery app]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="delivery app" mc="Standard.Package" uid="a77a1278-eb77-40d7-b43b-d1ab4521ac0b"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="Delivery app" mc="Infrastructure.DiagramSet" uid="9df30c5b-3343-47ef-a646-49b827c43034"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
