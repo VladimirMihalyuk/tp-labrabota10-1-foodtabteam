@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Payment" version="4">
+  <OBJECT>
+    <ID name="Payment" mc="Standard.ClassDiagram" uid="ca3bc450-90b6-48a5-b0eb-f74ab0328963"/>
+    <PID name="Payment" mc="Standard.Package" uid="22358939-ae12-46d7-9353-7862c3f823d2"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">36</ATT>
+      <ATT name="UiData"><![CDATA[eJztm1tT4kgUx79KitrXxNwvq+OUAuVag0KBY9XuC9XpnGDGXKhOM8p8+u0Owmh0IIQY0MobaZLT3cnv3+eS9MnXxygUfgJJgyT+0lIkuSV8PT3puz8AUyHwWFNLoPMpfGklZCJFiQdhkEhegCYERRJ4AU2IlFJEg3sJQoggpuniGC9PuohG2XFncdwSIvQjIeNVp3Lr9GRAkikQOhdiFLG+QjRPZrSDKGL/3aJwBk+DiGdh2Do6PTlaXvDq0hGdh9B6MQV13RRSfn4q4YSAtLi2wPjaKMXIA2/ZWfeRDsEv2Ms1M/F0pQCPtONesjFmP/mPq8WVgiY95iZ6tJjSuskTCBEFj40ld9+ueJPwk7fwW4RiDxFPaocoTZ8ei4CR5mLdkEVHdk1Rt5EhujK4om/pyJU11XZMbf2tZ9botzh5iHvIhTA3ghElQTxpnQ7QnENycpT9uXYySQiXcTuJpkkaUPYo/mCxgKn2XRB6BLiFXpDSF3RoJQDHIfr1i4Gd3cCdgB6yYaB4wll4ejq2fKzI8rFqK8eqZmwNu/7usHPSF7JaO7Z272w0Gg+7g2F3NL7qd7q5mXfjWfR3oUF+g/lfQ5gSSNnNR5wELpLfON8Mv7dvvg+7nSID6g/GF8P+98Ht5ejyvJcf1HnCoEPxyjYlMyhi9ezmZkez76RuQfEUTzU1X7R9WRV1RwPR1V0serpvKb7vub5sVSfrESYA8W0AD+0kpkzBIZDDkbqxq9QHJIgQmV9n+FWqevm4vOTNopJnph7nO+teb8jdntwrFMQcmx0JtkoQzK2mU4ThDtjjJIzl62XLP1lL/RGZXS+xZkPs9sQu2ChgML1LHsYBfmUo7/R8FKYbnGlm6h7mDwnxKrBGEb4fpxQIJDv7+Wxo4RtPZXtTyE0pQZiWmOGK3Gdicsp5tTQN/CBbDtqrgyGkwS/khnBBktm0/nVBkZuF4eAXhh1dmFKmooAo69ydUZhwMBmzZ8uG3Um9jJlZ7gWXCdiGNPctbguXGKrhlumkAXdrcF8ysyvGZeoGK4yfE1wpvKKyPbyFSwYVwZsvHFQP7+reCrbn+QqykKgZvivq2FVEx1VtETmapzmmJyNcBcDIY5ykaXZKvUvtZ4i+io6tZPj1VtCklKkFHKZ8a07/a5WvD5pjGIYuYtBkUTewJtqa7oommCqSHQDdyLvCMvKd3iUxXM8iF0gj4Q8j4TLFkMOUcM31kFolrGuqbWq2LGq+wzywpYNomw7zwOCCh1WMXORXIGHMem0U/MEUXKZ0cZAKVmsuXNSqYFMBw3JkQ1QNx2JOmCsY85DasjzLt0H31Q0vLYo54UUSeMMaG/UeqnqPFonwBmGrZWo83GD2dndZ4+kvG6qv8aj5yl8BiTc1ng9Q47kCepd4VRR41DIFnhXDz/HdwxdPNZd01Pd3R6u7KTjM5+iAbdFyTCzqwMhFpmOKhsPyQUdRbNOyqwgok9gPSNQnxd6CNf6oxhdq27qjMsWegLkMErObwvrHdEZ4vHn51DZatu1B2nWXexo3VELlS1B29UFlShyFwN3TC1615krHqzjvg9NbIaKlY6SCa26Z3L4Quv8l8R7WXa3mDP+zkVvPusvZqJjpYrhrZTLeII6BZJ/iZJyzg90/KM9nuoq84QXJW6w3qe4HYD0DZtfND2WS3D9gu6eQQqs519XeP9f9hLC+c7Shlcvw3uQY0j1FGDVndg3Ihx9hvP4r10+Q3rKjAKNqqyi5Xl5vf5GeiNsQfeQ/pXxTu6WS3AhNYLWzISsjcRHzVr67YcRbF7BUGUzlt74UEHXNCW+zOaeEpkds/mEY0CLC/gzF2QN4WbhxyekF8X26ZvXMnX4+6RD0wJ5mD82ZYF9qcH0pYrmkeAsDqRRyE2w1eWGxnnBgu6v2u907yEO7lFPnQuqd/dsdjs/P2t/4rtjrTtUe849Wnj+z3/g83x+9to7TwPBuMNz0B7XFTf8DXN+Erg==]]></ATT>
+      <ATT name="Name"><![CDATA[Payment]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <ID name="PaymentScreenViewController" mc="Standard.Class" uid="1d1d263f-8f02-493e-b4bc-d4f71ffdbf07"/>
+        <REFOBJ>
+          <ID name="addressLabel" mc="Standard.Attribute" uid="8ddf1a7a-35fb-4cb1-9b28-a93d396d0ac7"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="phoneNumberLabel" mc="Standard.Attribute" uid="fe395554-ce30-45c3-834b-6e62a09ee450"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="cardNumberLabel" mc="Standard.Attribute" uid="43286380-3f9b-474e-8698-aebedc2cabaf"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="paymentType" mc="Standard.Attribute" uid="61e57905-2597-454e-8c7a-377d7f8e4f25"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="confirmOrder" mc="Standard.Operation" uid="97f84ec8-796c-4e3f-a696-599ee9118678"/>
+        </REFOBJ>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="a3b5a588-7042-4228-9e89-5a5b546e367e"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

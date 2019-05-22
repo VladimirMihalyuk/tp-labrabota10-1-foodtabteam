@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Busket" version="4">
+  <OBJECT>
+    <ID name="Busket" mc="Standard.Package" uid="569ed419-bae9-4f84-bc99-bef79eb78335"/>
+    <PID name="Class Diagrams" mc="Standard.Package" uid="42289480-53e3-49b4-93d7-3ce2e1c75075"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Busket]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="BasketViewController" mc="Standard.Class" uid="8f9caa39-6ded-46e3-bc9c-932bee48405a"/>
+        <COMPID name="BasketItemViewCell" mc="Standard.Class" uid="a3aff3e7-e63c-4305-8df0-ae90811a846b"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Busket" mc="Standard.ClassDiagram" uid="0d839dff-e375-4ccf-81fc-a87ca759df9e"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="delivery app" version="4">
+  <OBJECT>
+    <ID name="delivery app" mc="Standard.Package" uid="a77a1278-eb77-40d7-b43b-d1ab4521ac0b"/>
+    <PID name="Delivery app" mc="Standard.Project" uid="0a2efa57-45b9-4689-afd5-7a02a908f661"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[delivery app]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Use Case Diagram" mc="Standard.Package" uid="d0167f80-6de7-404e-a454-ccad15977fcc"/>
+        <COMPID name="Class Diagrams" mc="Standard.Package" uid="42289480-53e3-49b4-93d7-3ce2e1c75075"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
