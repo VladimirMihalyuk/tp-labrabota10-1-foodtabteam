@@ -1,5 +1,5 @@
-language: objective-c
-osx_image: xcode9
-
-script:
-  - xcodebuild test -project foodDelivery/foodDelivery.xcodeproj -scheme foodDelivery -destination "platform=iOS Simulator,name=iPhone 7" -sdk iphonesimulator11.0 CODE_SIGNING_REQUIRED=NO
+language: objective-c  
+osx_image: xcode10.2
+xcode_project: foodDelivery.xcodeproj 
+xcode_scheme: foodDelivery
+xcode_sdk: iphonesimulator8.4 
