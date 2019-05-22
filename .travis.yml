@@ -1,4 +1,4 @@
 language: swift  
 osx_image: xcode10.3
 script:
-  - xcodebuild test -project foodDelivery/foodDelivery.xcodeproj -scheme foodDelivery -destination "platform=iOS Simulator,OS=12.1,name=iPhone 8" -sdk iphonesimulator12.1 CODE_SIGNING_REQUIRED=NO
+  - xcodebuild test -project foodDelivery/foodDelivery.xcodeproj -scheme foodDelivery -destination "platform=iOS Simulator,OS=12.1,name=iPhone 8" -sdk iphonesimulator11.0 CODE_SIGNING_REQUIRED=NO
