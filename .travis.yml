@@ -1,5 +1,5 @@
 language: objective-c  
-osx_image: xcode10.3
+osx_image: xcode10.1
 before_install: brew update
 xcode_project: foodDelivery/foodDelivery.xcodeproj 
 xcode_scheme: foodDelivery
