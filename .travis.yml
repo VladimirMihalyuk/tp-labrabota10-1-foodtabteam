@@ -1,7 +1,6 @@
 language: swift  
 before_install:
     - brew update
-    - brew install xcodebuild
 script: xcodebuild -workspace foodDelivery.xcworkspace -scheme foodDelivery test
 osx_image: xcode10.3
 xcode_project: foodDelivery/foodDelivery.xcodeproj 
