@@ -1,5 +1,5 @@
 language: swift  
 osx_image: xcode10.3
 xcode_project: foodDelivery/foodDelivery.xcodeproj 
-xcode_scheme: foodDelivery
+xcode_scheme: foodDelivery/foodDelivery
 xcode_destination: platform=iOS Simulator,OS=11.2,name=iPhone 8
