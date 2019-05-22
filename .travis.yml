@@ -2,5 +2,5 @@ language: objective-c
 osx_image: xcode10.2
 xcode_project: foodDelivery.xcodeproj
 xcode_scheme: foodDelivery
-xcode_sdk: iphonesimulator8.4
+xcode_sdk: iphonesimulator10.0
 
