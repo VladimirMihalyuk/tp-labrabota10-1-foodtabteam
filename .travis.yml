@@ -1,4 +1,5 @@
 language: objective-c  
 osx_image: xcode10.3
+before_install: brew update
 xcode_project: foodDelivery/foodDelivery.xcodeproj 
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone 8
