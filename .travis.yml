@@ -1,5 +1,5 @@
-language: 
-	- swift
+language:
+  - swift
 osx_image: xcode10.2
 script:
-	-xcodebuild -scheme foodDelivery -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.2,name=iPhone 8' build test
+  -xcodebuild -scheme foodDelivery -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.2,name=iPhone 8' build test
