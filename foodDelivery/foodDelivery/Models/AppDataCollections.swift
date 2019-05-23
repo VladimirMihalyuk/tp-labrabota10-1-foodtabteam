@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import CoreData
 
 class AppDataCollections{
+    static var itemDishMenuArray: [Dish] = []
     
 }
