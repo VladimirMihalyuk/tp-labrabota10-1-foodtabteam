@@ -32,6 +32,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
+        
         loadRestaurants()
     }
     
@@ -53,12 +54,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     
     func centerMapOnLocation(location: CLLocationCoordinate2D) {
-        locationManager.delegate = self
-        mapView.delegate = self
         let coordinateRegion = MKCoordinateRegion(center: location,
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
         print("current location: \(currentLocation)")
+        mapView.removeAnnotations(mapView.annotations)
         for restaurant in restaurants {
             if(checkRestaurant(location: restaurant.value)){
                 mapView.addAnnotation(RestaurantPin(title: restaurant.key, coordinate: restaurant.value))
@@ -100,10 +100,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
+        print("segue: \(view.annotation?.title)")
         if let annotationTitle = view.annotation?.title
         {
             let coordinate = restaurants[annotationTitle!]
-            self.performSegue(withIdentifier: "showDetails", sender: Artwork(title: annotationTitle!, coordinate: coordinate!))
+            self.performSegue(withIdentifier: "MapToPaymentScreen", sender: RestaurantPin(title: annotationTitle!, coordinate: coordinate!))
         }
     }
     
@@ -112,8 +113,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "MapToPaymentScreen" {
+            if let vc = segue.destination as? PaymentScreenViewController {
+                var pin = sender as! RestaurantPin
+                vc.restaurantName = pin.title
+            }
+        }
     }
  
 
