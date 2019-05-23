@@ -16,7 +16,7 @@
 		042A48CD22914F1D00E0C8DD /* foodDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A48CC22914F1D00E0C8DD /* foodDeliveryTests.swift */; };
 		042A48D822914F1D00E0C8DD /* foodDeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A48D722914F1D00E0C8DD /* foodDeliveryUITests.swift */; };
 		04EFFCA02296FDDB001EB453 /* AppDataCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFC9F2296FDDB001EB453 /* AppDataCollections.swift */; };
-		04EFFCA22297074B001EB453 /* RestaurantPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFCA12297074B001EB453 /* RestaurantPin.swift */; };
+		04EFFCA322972BA5001EB453 /* RestaurantPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFCA12297074B001EB453 /* RestaurantPin.swift */; };
 		3A16C4FE2295899600EAB50D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C4FD2295899600EAB50D /* CustomButton.swift */; };
 		3A16C5002295B7DF00EAB50D /* DishMenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C4FF2295B7DF00EAB50D /* DishMenuScreenViewController.swift */; };
 		3A16C5022295B89200EAB50D /* DishInformationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C5012295B89200EAB50D /* DishInformationScreenViewController.swift */; };
@@ -310,7 +310,7 @@
 				3A16C4FE2295899600EAB50D /* CustomButton.swift in Sources */,
 				3A16C5022295B89200EAB50D /* DishInformationScreenViewController.swift in Sources */,
 				3A16C5042295B8EC00EAB50D /* OrderConfirmationScreenViewController.swift in Sources */,
-				04EFFCA22297074B001EB453 /* RestaurantPin.swift in Sources */,
+				04EFFCA322972BA5001EB453 /* RestaurantPin.swift in Sources */,
 				3A16C5062295B92900EAB50D /* PaymentScreenViewController.swift in Sources */,
 				3A16C5082295B94900EAB50D /* MapViewController.swift in Sources */,
 				04EFFCA02296FDDB001EB453 /* AppDataCollections.swift in Sources */,

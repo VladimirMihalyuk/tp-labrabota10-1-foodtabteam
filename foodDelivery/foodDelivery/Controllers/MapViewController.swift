@@ -9,11 +9,18 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
+    let showRadius:Double = 15000
+    let regionRadius:Double = 15000
+    var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.0, longitude: 27.0)
+    var restaurants: [String: CLLocationCoordinate2D] = [:]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,27 +32,82 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
-        
-        setupData()
+        loadRestaurants()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // 1. status is not determined
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
+        if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestAlwaysAuthorization()
         }
-            // 2. authorization were denied
-        else if CLLocationManager.authorizationStatus() == .Denied {
-            showAlert("Location services were previously denied. Please enable location services for this app in Settings.")
+            
+        else if CLLocationManager.authorizationStatus() == .denied {
+            print("Location services were previously denied. Please enable location services for this app in Settings.")
         }
-            // 3. we do have authorization
-        else if CLLocationManager.authorizationStatus() == .AuthorizedAlways {
+        
+        else if CLLocationManager.authorizationStatus() == .authorizedAlways {
             locationManager.startUpdatingLocation()
         }
     }
-    /*
+    
+    
+    func centerMapOnLocation(location: CLLocationCoordinate2D) {
+        locationManager.delegate = self
+        mapView.delegate = self
+        let coordinateRegion = MKCoordinateRegion(center: location,
+                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+        print("current location: \(currentLocation)")
+        for restaurant in restaurants {
+            if(checkRestaurant(location: restaurant.value)){
+                mapView.addAnnotation(RestaurantPin(title: restaurant.key, coordinate: restaurant.value))
+            }
+        }
+    }
+    
+    func checkRestaurant(location: CLLocationCoordinate2D) -> Bool {
+        return MKMapPoint(location).distance(to: MKMapPoint(currentLocation)) < showRadius
+    }
+    
+    func loadRestaurants(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedObjectContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Restaurant")
+        
+        do{
+            let results = try managedObjectContext.fetch(fetchRequest)
+            for data in results as! [NSManagedObject] {
+                let coordinate = CLLocationCoordinate2D(latitude: data.value(forKey: "latitude") as! CLLocationDegrees , longitude: data.value(forKey: "longitude") as! CLLocationDegrees)
+                let title = data.value(forKey: "name") as! String
+                restaurants[title] = coordinate
+                print("restaurant \(title)")
+                
+            }
+        }catch let error as NSError {
+            print("Data loading error: \(error)")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        for locValue in locations{
+            //print("locations = \(locValue)")
+            currentLocation = locValue.coordinate
+            centerMapOnLocation(location: currentLocation)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
+    {
+        if let annotationTitle = view.annotation?.title
+        {
+            let coordinate = restaurants[annotationTitle!]
+            self.performSegue(withIdentifier: "showDetails", sender: Artwork(title: annotationTitle!, coordinate: coordinate!))
+        }
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -53,6 +115,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

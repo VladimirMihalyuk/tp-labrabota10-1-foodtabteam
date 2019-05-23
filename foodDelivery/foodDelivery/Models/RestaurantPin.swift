@@ -7,11 +7,23 @@
 //
 
 import Foundation
+import MapKit
 
-class RestaurantPin {
+class RestaurantPin: NSObject, MKAnnotation {
     
-    var restaurantName:String?
-    var latitude:Double?
-    var longitude:Double?
+    let restaurantName:String?
+    let coordinate: CLLocationCoordinate2D
+    
+    init(title: String, coordinate: CLLocationCoordinate2D) {
+        self.restaurantName = title
+        
+        self.coordinate = coordinate
+        
+        super.init()
+    }
+
+    var subtitle: String? {
+        return restaurantName
+    }
     
 }
