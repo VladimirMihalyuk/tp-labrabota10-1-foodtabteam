@@ -21,7 +21,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BOs-WH-pVV" kind="relationship" relationship="rootViewController" id="MaB-td-DnT"/>
+                        <segue destination="bun-Od-jSV" kind="relationship" relationship="rootViewController" id="Wia-YE-C43"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUw-xU-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,7 +258,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z5x-wA-2Kg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FTH-Cq-Lub"/>
                     <connections>
                         <outlet property="resultCostLabel" destination="676-lO-M0J" id="YUp-6J-0z4"/>
                         <outlet property="tableView" destination="Dgz-2N-RYZ" id="P8a-aM-z4n"/>
@@ -441,6 +440,6 @@
         <image name="ShoppingCart" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MaB-td-DnT"/>
+        <segue reference="rZS-1B-kGE"/>
     </inferredMetricsTieBreakers>
 </document>
