@@ -55,7 +55,7 @@
 		042A48D322914F1D00E0C8DD /* foodDeliveryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foodDeliveryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042A48D722914F1D00E0C8DD /* foodDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodDeliveryUITests.swift; sourceTree = "<group>"; };
 		042A48D922914F1D00E0C8DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A16C4FD2295899600EAB50D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = foodDelivery/Models/CustomButton.swift; sourceTree = SOURCE_ROOT; };
+		3A16C4FD2295899600EAB50D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = foodDelivery/Views/CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		3A16C4FF2295B7DF00EAB50D /* DishMenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishMenuScreenViewController.swift; sourceTree = "<group>"; };
 		3A16C5012295B89200EAB50D /* DishInformationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishInformationScreenViewController.swift; sourceTree = "<group>"; };
 		3A16C5032295B8EC00EAB50D /* OrderConfirmationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationScreenViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +143,7 @@
 		042A48E522914F3300E0C8DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A16C4FD2295899600EAB50D /* CustomButton.swift */,
 				042A48B822914F1300E0C8DD /* Main.storyboard */,
 				042A48C022914F1C00E0C8DD /* LaunchScreen.storyboard */,
 			);
@@ -165,7 +166,6 @@
 		3A16C5092295C08B00EAB50D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A16C4FD2295899600EAB50D /* CustomButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
