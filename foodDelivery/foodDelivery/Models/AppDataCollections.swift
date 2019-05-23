@@ -9,5 +9,5 @@
 import Foundation
 
 class AppDataCollections{
-    
+    static var order: [String: Int] = [:]
 }
