@@ -11,4 +11,7 @@ import CoreData
 
 class AppDataCollections{
     static var order: [Dish: Int] = [:]
+
+    static var itemDishMenuArray: [Dish] = []
+    
 }
