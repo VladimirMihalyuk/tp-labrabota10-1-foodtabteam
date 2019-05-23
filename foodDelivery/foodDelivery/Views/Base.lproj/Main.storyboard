@@ -21,7 +21,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bun-Od-jSV" kind="relationship" relationship="rootViewController" id="Wia-YE-C43"/>
+                        <segue destination="L7X-u6-kyx" kind="relationship" relationship="rootViewController" id="ev2-NP-Eqe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUw-xU-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,6 +166,10 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="z53-fe-4xh" id="BHm-lz-UV9"/>
+                                            <outlet property="nameLabel" destination="V2Z-Me-XwX" id="jEY-H9-N9P"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -173,6 +177,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dJZ-Ze-I5X"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oE0-F7-Tjr"/>
                     <connections>
                         <outlet property="collectionView" destination="3bd-3Z-w4s" id="nt2-2h-gpO"/>
                         <segue destination="9tI-8R-ZbH" kind="show" identifier="DishMenuScreenToDishInformationScreen" id="faU-9X-9NG"/>
@@ -411,5 +416,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Sbi-BQ-efk"/>
+        <segue reference="ev2-NP-Eqe"/>
     </inferredMetricsTieBreakers>
 </document>

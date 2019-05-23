@@ -10,4 +10,17 @@ import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var dish: Dish?{
+        didSet{
+            nameLabel.text = dish?.name
+            if let image = dish?.image_name{
+                imageView.image = UIImage(named: image)
+            }
+        }
+    }
 }

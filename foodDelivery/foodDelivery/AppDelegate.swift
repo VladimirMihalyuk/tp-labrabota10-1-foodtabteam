@@ -13,13 +13,11 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var context: NSManagedObjectContext!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        print(urls[urls.count - 1] as URL)
-        
+        context = persistentContainer.viewContext
+        fetch()
         return true
     }
 
@@ -91,6 +89,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 
+extension AppDelegate{
+    public func fetch() -> [Dish]{
+        let fetchRequest = NSFetchRequest<Dish>(entityName: "Dish")
+        let flights = try! context.fetch(fetchRequest)
+        return flights
+    }
+    
+    
+}
