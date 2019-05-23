@@ -36,6 +36,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         loadRestaurants()
     }
     
+    @IBAction func goToBusket(_ sender: Any) {
+        self.performSegue(withIdentifier: "DishMenuScreenToOrderConfirmationScreen", sender: nil)
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

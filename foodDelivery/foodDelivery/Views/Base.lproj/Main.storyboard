@@ -134,6 +134,9 @@
                                 <rect key="frame" x="308" y="62" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ShoppingCart"/>
+                                <connections>
+                                    <action selector="goToBusket:" destination="fDz-OF-Aa6" eventType="touchUpInside" id="lJs-Ug-vzB"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-3Z-w4s">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
@@ -185,6 +188,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VD-UI-h3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fDz-OF-Aa6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1676" y="133.5832083958021"/>
         </scene>
@@ -426,11 +430,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add to cart"/>
+                                <connections>
+                                    <action selector="addToBusket:" destination="9tI-8R-ZbH" eventType="touchUpInside" id="wbo-Wp-bGj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0H-vS-zBJ">
                                 <rect key="frame" x="309" y="64" width="66" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ShoppingCart"/>
+                                <connections>
+                                    <action selector="goToBusket:" destination="9tI-8R-ZbH" eventType="touchUpInside" id="mHp-Nh-caA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

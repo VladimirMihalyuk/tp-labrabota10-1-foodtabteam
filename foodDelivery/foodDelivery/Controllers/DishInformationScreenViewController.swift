@@ -47,15 +47,32 @@ class DishInformationScreenViewController: UIViewController {
     
     @IBOutlet weak var plusMinus: UIStepper!
     
+    @IBAction func addToBusket(_ sender: Any) {
+        
+        if let num =  AppDataCollections.order[dish!] {
+            AppDataCollections.order[dish!] = num + Int(plusMinus.value)
+            
+        } else {
+            AppDataCollections.order[dish!] = Int(plusMinus.value)
+        }
+        
+    }
+    
+    @IBAction func goToBusket(_ sender: Any) {
+        self.performSegue(withIdentifier: "DishInformationScreenToOrderConfirmationScreen", sender: nil)
+    }
     
     var dish: Dish?
     
     @IBAction func changeValue(_ sender: Any) {
         count.text = "\(plusMinus.value)"
+        //count.reloadInputViews()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        plusMinus.value = 1
         count.text = "\(plusMinus.value)"
+        
       
     }
     
