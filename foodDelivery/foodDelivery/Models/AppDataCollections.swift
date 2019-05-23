@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import CoreData
 
 class AppDataCollections{
-    static var order: [String: Int] = [:]
+    static var order: [Dish: Int] = [:]
+    
+    static func fillOrder(){
+    }
+    
 }

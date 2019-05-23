@@ -22,6 +22,7 @@
 		3A16C5042295B8EC00EAB50D /* OrderConfirmationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C5032295B8EC00EAB50D /* OrderConfirmationScreenViewController.swift */; };
 		3A16C5062295B92900EAB50D /* PaymentScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C5052295B92900EAB50D /* PaymentScreenViewController.swift */; };
 		3A16C5082295B94900EAB50D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C5072295B94900EAB50D /* MapViewController.swift */; };
+		3A7765ED229718B0003A006A /* DishOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7765EC229718B0003A006A /* DishOrderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3A16C5032295B8EC00EAB50D /* OrderConfirmationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationScreenViewController.swift; sourceTree = "<group>"; };
 		3A16C5052295B92900EAB50D /* PaymentScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScreenViewController.swift; sourceTree = "<group>"; };
 		3A16C5072295B94900EAB50D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3A7765EC229718B0003A006A /* DishOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishOrderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				3A16C4FD2295899600EAB50D /* CustomButton.swift */,
 				042A48B822914F1300E0C8DD /* Main.storyboard */,
 				042A48C022914F1C00E0C8DD /* LaunchScreen.storyboard */,
+				3A7765EC229718B0003A006A /* DishOrderCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				3A16C5082295B94900EAB50D /* MapViewController.swift in Sources */,
 				04EFFCA02296FDDB001EB453 /* AppDataCollections.swift in Sources */,
 				042A48B722914F1300E0C8DD /* RegistrationViewController.swift in Sources */,
+				3A7765ED229718B0003A006A /* DishOrderCell.swift in Sources */,
 				3A16C5002295B7DF00EAB50D /* DishMenuScreenViewController.swift in Sources */,
 				042A48B522914F1300E0C8DD /* AppDelegate.swift in Sources */,
 				042A48BD22914F1300E0C8DD /* foodDelivery.xcdatamodeld in Sources */,

@@ -21,7 +21,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bun-Od-jSV" kind="relationship" relationship="rootViewController" id="Wia-YE-C43"/>
+                        <segue destination="BOs-WH-pVV" kind="relationship" relationship="rootViewController" id="MaB-td-DnT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUw-xU-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -196,7 +196,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="rTo-fe-BWq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="rTo-fe-BWq" customClass="DishOrderCell" customModule="foodDelivery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rTo-fe-BWq" id="2Y9-cj-ceA">
@@ -210,8 +210,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-aO-WIE">
-                                                    <rect key="frame" x="286" y="37" width="47" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-aO-WIE">
+                                                    <rect key="frame" x="286" y="35" width="12" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
@@ -223,6 +223,11 @@
                                                 </stepper>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="AmountLabel" destination="d6d-aO-WIE" id="mth-13-52j"/>
+                                            <outlet property="NameLabel" destination="MUc-e5-ObF" id="gwM-EY-imB"/>
+                                            <outlet property="stepper" destination="3VW-NR-eeC" id="hWD-KZ-JR9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -233,7 +238,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="676-lO-M0J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="676-lO-M0J">
                                 <rect key="frame" x="181" y="553" width="178" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -253,7 +258,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z5x-wA-2Kg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FTH-Cq-Lub"/>
                     <connections>
+                        <outlet property="resultCostLabel" destination="676-lO-M0J" id="YUp-6J-0z4"/>
+                        <outlet property="tableView" destination="Dgz-2N-RYZ" id="P8a-aM-z4n"/>
                         <segue destination="2jI-gG-brl" kind="show" identifier="OrderConfirmationScreenToMap" id="e8K-wt-auP"/>
                     </connections>
                 </viewController>
@@ -433,6 +441,6 @@
         <image name="ShoppingCart" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rZS-1B-kGE"/>
+        <segue reference="MaB-td-DnT"/>
     </inferredMetricsTieBreakers>
 </document>
