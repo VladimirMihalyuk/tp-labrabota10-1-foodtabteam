@@ -10,22 +10,50 @@ import UIKit
 
 class DishMenuScreenViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //dfthe
-        // Do any additional setup after loading the view.
+        loadDishes()
+        for dish in AppDataCollections.itemDishMenuArray{
+            print(dish.name)
+        }
+        print("loaded")
+        collectionView.dataSource = self as! UICollectionViewDataSource
+        collectionView.delegate = self as! UICollectionViewDelegate
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadDishes(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        AppDataCollections.itemDishMenuArray = appDelegate.fetch()
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "DishMenuScreenToDishInformationScreen"{
+            if let vc = segue.destination as? DishInformationScreenViewController{
+                let dish = sender as? Dish
+                vc.dish = dish
+            }
+        }
+    }
+}
 
+extension DishMenuScreenViewController:UICollectionViewDataSource, UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath)as? MenuCollectionViewCell{
+        itemCell.dish = AppDataCollections.itemDishMenuArray[indexPath.row]
+        return itemCell
+        }
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return AppDataCollections.itemDishMenuArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let dish = AppDataCollections.itemDishMenuArray[indexPath.row]
+        self.performSegue(withIdentifier: "DishMenuScreenToDishInformationScreen", sender: dish)
+    }
+    
 }
