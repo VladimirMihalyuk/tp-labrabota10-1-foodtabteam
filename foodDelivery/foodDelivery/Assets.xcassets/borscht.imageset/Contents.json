@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "beaf_well_done.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "borscht.jpg",
       "scale" : "2x"
     },
     {

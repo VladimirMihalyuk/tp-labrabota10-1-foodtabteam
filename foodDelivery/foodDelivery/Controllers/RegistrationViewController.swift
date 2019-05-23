@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegistrationViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
     segmController.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
         registrationButton.setTitle("Register", for: .normal)
+        
     }
     
     
