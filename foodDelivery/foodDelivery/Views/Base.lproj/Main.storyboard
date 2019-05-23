@@ -21,7 +21,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="L7X-u6-kyx" kind="relationship" relationship="rootViewController" id="ev2-NP-Eqe"/>
+                        <segue destination="bun-Od-jSV" kind="relationship" relationship="rootViewController" id="S8C-8a-bQs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUw-xU-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -427,6 +427,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rZS-1B-kGE"/>
-        <segue reference="ev2-NP-Eqe"/>
     </inferredMetricsTieBreakers>
 </document>
