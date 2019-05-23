@@ -10,22 +10,17 @@ import UIKit
 
 class DishMenuScreenViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //dfthe
-        // Do any additional setup after loading the view.
+        collectionView.dataSource = self as! UICollectionViewDataSource
+        collectionView.delegate = self as! UICollectionViewDelegate
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

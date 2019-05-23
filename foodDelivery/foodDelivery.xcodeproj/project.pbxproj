@@ -16,6 +16,7 @@
 		042A48CD22914F1D00E0C8DD /* foodDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A48CC22914F1D00E0C8DD /* foodDeliveryTests.swift */; };
 		042A48D822914F1D00E0C8DD /* foodDeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A48D722914F1D00E0C8DD /* foodDeliveryUITests.swift */; };
 		04EFFCA02296FDDB001EB453 /* AppDataCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFC9F2296FDDB001EB453 /* AppDataCollections.swift */; };
+		1DA5E73F22970DD700FC77BB /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA5E73E22970DD700FC77BB /* MenuCollectionViewCell.swift */; };
 		3A16C4FE2295899600EAB50D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C4FD2295899600EAB50D /* CustomButton.swift */; };
 		3A16C5002295B7DF00EAB50D /* DishMenuScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C4FF2295B7DF00EAB50D /* DishMenuScreenViewController.swift */; };
 		3A16C5022295B89200EAB50D /* DishInformationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A16C5012295B89200EAB50D /* DishInformationScreenViewController.swift */; };
@@ -57,6 +58,7 @@
 		042A48D722914F1D00E0C8DD /* foodDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodDeliveryUITests.swift; sourceTree = "<group>"; };
 		042A48D922914F1D00E0C8DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EFFC9F2296FDDB001EB453 /* AppDataCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataCollections.swift; sourceTree = "<group>"; };
+		1DA5E73E22970DD700FC77BB /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A16C4FD2295899600EAB50D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = foodDelivery/Views/CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		3A16C4FF2295B7DF00EAB50D /* DishMenuScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishMenuScreenViewController.swift; sourceTree = "<group>"; };
 		3A16C5012295B89200EAB50D /* DishInformationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishInformationScreenViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				3A16C4FD2295899600EAB50D /* CustomButton.swift */,
 				042A48B822914F1300E0C8DD /* Main.storyboard */,
+				1DA5E73E22970DD700FC77BB /* MenuCollectionViewCell.swift */,
 				042A48C022914F1C00E0C8DD /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -311,6 +314,7 @@
 				3A16C5082295B94900EAB50D /* MapViewController.swift in Sources */,
 				04EFFCA02296FDDB001EB453 /* AppDataCollections.swift in Sources */,
 				042A48B722914F1300E0C8DD /* RegistrationViewController.swift in Sources */,
+				1DA5E73F22970DD700FC77BB /* MenuCollectionViewCell.swift in Sources */,
 				3A16C5002295B7DF00EAB50D /* DishMenuScreenViewController.swift in Sources */,
 				042A48B522914F1300E0C8DD /* AppDelegate.swift in Sources */,
 				042A48BD22914F1300E0C8DD /* foodDelivery.xcdatamodeld in Sources */,
