@@ -290,6 +290,7 @@
                         <viewLayoutGuide key="safeArea" id="EZn-Rb-Xfc"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="OWw-aK-iHz" id="kwh-mN-deP"/>
                         <segue destination="f9W-OA-1TO" kind="show" identifier="MapToPaymentScreen" id="chi-o3-nF5"/>
                     </connections>
                 </viewController>

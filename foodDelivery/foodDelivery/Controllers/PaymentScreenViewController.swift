@@ -10,6 +10,9 @@ import UIKit
 
 class PaymentScreenViewController: UIViewController {
 
+    
+    var restaurantName:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
