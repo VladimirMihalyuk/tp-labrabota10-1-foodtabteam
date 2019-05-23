@@ -7,10 +7,6 @@
 //
 
 import UIKit
-
-
-class OrderConfirmationScreenViewController: UIViewController {
-
     
 
 class OrderConfirmationScreenViewController: UIViewController, UITableViewDataSource {

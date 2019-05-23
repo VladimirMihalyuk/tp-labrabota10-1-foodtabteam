@@ -41,7 +41,7 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "RegistrationToDishMenuScreen", sender: nil)
     }
     
     
