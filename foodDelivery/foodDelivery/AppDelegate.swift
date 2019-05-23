@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         context = persistentContainer.viewContext
-        fetch()
+        //createDishes()
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print(urls[urls.count - 1] as URL)
         return true
     }
 
@@ -98,5 +100,16 @@ extension AppDelegate{
         return flights
     }
     
+    public func createDishes(){
+        let dish = Dish(context: context)
+        dish.composition = "Meat"
+        dish.cooking_time = "60"
+        dish.image_name = "beef_well_done"
+        dish.name = "Beaf well done"
+        dish.price = 30.0
+        dish.supplements = "Souse"
+        
+        saveContext()
+    }
     
 }

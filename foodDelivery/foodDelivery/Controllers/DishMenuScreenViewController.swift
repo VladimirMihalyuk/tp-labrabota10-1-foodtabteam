@@ -27,6 +27,15 @@ class DishMenuScreenViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         AppDataCollections.itemDishMenuArray = appDelegate.fetch()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "DishMenuScreenToDishInformationScreen"{
+            if let vc = segue.destination as? DishInformationScreenViewController{
+                let dish = sender as? Dish
+                vc.dish = dish
+            }
+        }
+    }
 }
 
 extension DishMenuScreenViewController:UICollectionViewDataSource, UICollectionViewDelegate{
@@ -42,5 +51,9 @@ extension DishMenuScreenViewController:UICollectionViewDataSource, UICollectionV
         return AppDataCollections.itemDishMenuArray.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let dish = AppDataCollections.itemDishMenuArray[indexPath.row]
+        self.performSegue(withIdentifier: "DishMenuScreenToDishInformationScreen", sender: dish)
+    }
     
 }

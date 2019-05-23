@@ -357,6 +357,9 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="awK-hw-M3x">
                                 <rect key="frame" x="78" y="440" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="9tI-8R-ZbH" eventType="valueChanged" id="tBi-0P-c0o"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdW-Jj-cLe">
                                 <rect key="frame" x="212" y="440" width="106" height="29"/>
@@ -403,6 +406,14 @@
                         <viewLayoutGuide key="safeArea" id="LQY-vr-hc3"/>
                     </view>
                     <connections>
+                        <outlet property="additional" destination="xgU-pE-Hnw" id="NAZ-q5-U6O"/>
+                        <outlet property="cost" destination="mNC-4U-bP7" id="krg-nb-6PW"/>
+                        <outlet property="count" destination="NdW-Jj-cLe" id="6Uq-XI-hNW"/>
+                        <outlet property="descriptionOfDish" destination="hlo-nt-fIY" id="dAB-DE-Q19"/>
+                        <outlet property="image" destination="fel-3f-1HH" id="lWn-pd-zT8"/>
+                        <outlet property="name" destination="Iyn-lk-mXk" id="g5b-XW-etb"/>
+                        <outlet property="plusMinus" destination="awK-hw-M3x" id="ubZ-YI-yKE"/>
+                        <outlet property="segment" destination="dFW-5R-Pbl" id="fud-MF-rAX"/>
                         <segue destination="BOs-WH-pVV" kind="show" identifier="DishInformationScreenToOrderConfirmationScreen" id="rZS-1B-kGE"/>
                     </connections>
                 </viewController>
@@ -415,7 +426,7 @@
         <image name="ShoppingCart" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Sbi-BQ-efk"/>
+        <segue reference="rZS-1B-kGE"/>
         <segue reference="ev2-NP-Eqe"/>
     </inferredMetricsTieBreakers>
 </document>
