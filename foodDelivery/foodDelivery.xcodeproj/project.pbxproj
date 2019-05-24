@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		042A48B522914F1300E0C8DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A48B422914F1300E0C8DD /* AppDelegate.swift */; };
-		042A48B722914F1300E0C8DD /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A48B622914F1300E0C8DD /* RegistrationViewController.swift */; };
 		042A48BA22914F1300E0C8DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042A48B822914F1300E0C8DD /* Main.storyboard */; };
 		042A48BD22914F1300E0C8DD /* foodDelivery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 042A48BB22914F1300E0C8DD /* foodDelivery.xcdatamodeld */; };
 		042A48BF22914F1C00E0C8DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042A48BE22914F1C00E0C8DD /* Assets.xcassets */; };
@@ -49,7 +48,6 @@
 /* Begin PBXFileReference section */
 		042A48B122914F1300E0C8DD /* foodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042A48B422914F1300E0C8DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		042A48B622914F1300E0C8DD /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		042A48B922914F1300E0C8DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		042A48BC22914F1300E0C8DD /* foodDelivery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = foodDelivery.xcdatamodel; sourceTree = "<group>"; };
 		042A48BE22914F1C00E0C8DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		042A48E722914F4400E0C8DD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				042A48B622914F1300E0C8DD /* RegistrationViewController.swift */,
 				3A16C4FF2295B7DF00EAB50D /* DishMenuScreenViewController.swift */,
 				3A16C5012295B89200EAB50D /* DishInformationScreenViewController.swift */,
 				3A16C5032295B8EC00EAB50D /* OrderConfirmationScreenViewController.swift */,
@@ -327,7 +324,6 @@
 				3A16C5062295B92900EAB50D /* PaymentScreenViewController.swift in Sources */,
 				3A16C5082295B94900EAB50D /* MapViewController.swift in Sources */,
 				04EFFCA02296FDDB001EB453 /* AppDataCollections.swift in Sources */,
-				042A48B722914F1300E0C8DD /* RegistrationViewController.swift in Sources */,
 				3A7765ED229718B0003A006A /* DishOrderCell.swift in Sources */,
 				1DA5E73F22970DD700FC77BB /* MenuCollectionViewCell.swift in Sources */,
 				3A16C5002295B7DF00EAB50D /* DishMenuScreenViewController.swift in Sources */,

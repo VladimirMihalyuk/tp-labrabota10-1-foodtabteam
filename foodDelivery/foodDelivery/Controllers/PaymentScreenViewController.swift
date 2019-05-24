@@ -84,6 +84,11 @@ class PaymentScreenViewController: UIViewController {
         AppDataCollections.resetData()
         
         performSegue(withIdentifier: "PaymentScreenToDishMenuScreen", sender: self)
+        let alertController = UIAlertController(title: "Success!", message: "Your order has been accepted!", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+        
+        
     }
     
     func addToPList(value:String?){
