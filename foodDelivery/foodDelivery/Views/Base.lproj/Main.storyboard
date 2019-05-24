@@ -344,6 +344,9 @@
                                     <segment title="Cash"/>
                                 </segments>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="paymentChanged:" destination="f9W-OA-1TO" eventType="valueChanged" id="uux-ga-eXn"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Card number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-FX-Yyi">
                                 <rect key="frame" x="35" y="292" width="304" height="30"/>
@@ -357,15 +360,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmPressed:" destination="f9W-OA-1TO" eventType="touchUpInside" id="lw1-4s-kzQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ikp-5Q-Lv6"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="Oe7-Mw-vT2" id="gIV-GK-VYv"/>
+                        <outlet property="cardField" destination="4bG-FX-Yyi" id="sDt-hp-j8N"/>
+                        <outlet property="paymentSegment" destination="n89-Ha-SFt" id="Ftf-kc-oG1"/>
+                        <outlet property="telephoneField" destination="4CF-qT-2S8" id="FGf-BT-djj"/>
+                        <segue destination="L7X-u6-kyx" kind="show" identifier="PaymentScreenToDishMenuScreen" id="KCJ-dt-VSk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qA8-4g-MDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4138.3999999999996" y="674.21289355322347"/>
+            <point key="canvasLocation" x="4055" y="-56"/>
         </scene>
         <!--Dish Information Screen View Controller-->
         <scene sceneID="kj4-JN-Vey">
@@ -495,6 +508,11 @@
         <image name="ShoppingCart" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
+
+        <segue reference="rZS-1B-kGE"/>
+        <segue reference="KCJ-dt-VSk"/>
+
         <segue reference="Sbi-BQ-efk"/>
+
     </inferredMetricsTieBreakers>
 </document>
