@@ -49,12 +49,23 @@ class DishInformationScreenViewController: UIViewController {
     
     @IBAction func addToBusket(_ sender: Any) {
         
-        if let num =  AppDataCollections.order[dish!] {
-            AppDataCollections.order[dish!] = num + Int(plusMinus.value)
-            
+        if segment.selectedSegmentIndex == 0{
+            dish?.supplements = nil
         } else {
-            AppDataCollections.order[dish!] = Int(plusMinus.value)
+            dish?.supplements = dishSupplement
         }
+        
+        for i in 0..<AppDataCollections.basketNames.count{
+            if AppDataCollections.basketNames[i].name == dish?.name{
+                if AppDataCollections.basketNames[i].supplements == dish?.supplements{
+                    AppDataCollections.basketAmounts[i] += Int(plusMinus.value)
+                    return
+                }
+                
+            }
+        }
+        AppDataCollections.basketNames.append(dish!)
+        AppDataCollections.basketAmounts.append(Int(plusMinus.value))
         
     }
     
@@ -63,6 +74,7 @@ class DishInformationScreenViewController: UIViewController {
     }
     
     var dish: Dish?
+    var dishSupplement:String?
     
     @IBAction func changeValue(_ sender: Any) {
         count.text = "\(plusMinus.value)"
@@ -72,7 +84,7 @@ class DishInformationScreenViewController: UIViewController {
         super.viewDidLoad()
         plusMinus.value = 1
         count.text = "\(plusMinus.value)"
-        
+        dishSupplement = dish?.supplements
       
     }
     

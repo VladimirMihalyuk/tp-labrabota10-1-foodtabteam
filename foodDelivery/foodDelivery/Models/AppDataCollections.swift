@@ -10,8 +10,9 @@ import Foundation
 import CoreData
 
 class AppDataCollections{
-    static var order: [Dish: Int] = [:]
-
+    //static var order: [Dish: Int] = [:]
+    static var basketNames: [Dish] = []
+    static var basketAmounts: [Int] = []
     static var itemDishMenuArray: [Dish] = []
     
 }

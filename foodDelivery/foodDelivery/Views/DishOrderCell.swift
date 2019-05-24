@@ -13,4 +13,6 @@ class DishOrderCell: UITableViewCell{
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var AmountLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper!
+    
+
 }
