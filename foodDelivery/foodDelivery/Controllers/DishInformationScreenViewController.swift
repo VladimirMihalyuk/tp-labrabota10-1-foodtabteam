@@ -84,6 +84,7 @@ class DishInformationScreenViewController: UIViewController {
     
     @IBAction func changeValue(_ sender: Any) {
         count.text = "\(plusMinus.value)"
+        self.updateViewConstraints()    
         //count.reloadInputViews()
     }
     override func viewDidLoad() {

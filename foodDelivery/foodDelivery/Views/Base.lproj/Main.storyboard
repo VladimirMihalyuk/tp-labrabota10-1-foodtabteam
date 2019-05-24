@@ -136,6 +136,7 @@
                                 <state key="normal" title="Button" image="ShoppingCart"/>
                                 <connections>
                                     <action selector="goToBusket:" destination="fDz-OF-Aa6" eventType="touchUpInside" id="lJs-Ug-vzB"/>
+                                    <action selector="goToBusket:" destination="L7X-u6-kyx" eventType="touchUpInside" id="xn2-53-ahd"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-3Z-w4s">
@@ -494,6 +495,6 @@
         <image name="ShoppingCart" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rZS-1B-kGE"/>
+        <segue reference="Sbi-BQ-efk"/>
     </inferredMetricsTieBreakers>
 </document>
