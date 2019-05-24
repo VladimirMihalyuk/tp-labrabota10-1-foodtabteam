@@ -17,9 +17,12 @@ class PaymentScreenViewController: UIViewController {
     @IBOutlet weak var paymentSegment: UISegmentedControl!
     var restaurantName:String?
     var resultString:String = ""
+    var demoDict : NSMutableDictionary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let path = Bundle.main.path(forResource: "Orders", ofType: "plist")
+        demoDict = NSMutableDictionary(contentsOfFile: path!)
     }
     
     @IBAction func paymentChanged(_ sender: Any) {
@@ -73,10 +76,8 @@ class PaymentScreenViewController: UIViewController {
         else{
             resultString += "cash"
         }
-<<<<<<< HEAD
-        //add to plist
-        //delete data from collections
-=======
+
+
         print(resultString)
         addToPList(value: resultString)
         viewPlist(name: "Orders")
@@ -114,7 +115,6 @@ class PaymentScreenViewController: UIViewController {
         if let dict = demoDict {
             print("plist: \(dict.value(forKey: "order") ?? "default order")")
         }
->>>>>>> Improve confirmation window
     }
     
 }

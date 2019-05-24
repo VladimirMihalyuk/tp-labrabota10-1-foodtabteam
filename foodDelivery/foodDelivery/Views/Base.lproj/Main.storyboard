@@ -485,13 +485,10 @@
         <image name="ShoppingCart" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
 
         <segue reference="Sbi-BQ-efk"/>
 
 
-=======
->>>>>>> Improve confirmation window
         <segue reference="rZS-1B-kGE"/>
         <segue reference="KCJ-dt-VSk"/>
 

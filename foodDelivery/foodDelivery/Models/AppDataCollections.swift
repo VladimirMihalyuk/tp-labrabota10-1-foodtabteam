@@ -15,4 +15,9 @@ class AppDataCollections{
     static var basketAmounts: [Int] = []
     static var itemDishMenuArray: [Dish] = []
     
+    static func resetData(){
+        basketNames.removeAll()
+        basketAmounts.removeAll()
+        itemDishMenuArray.removeAll()
+    }
 }
