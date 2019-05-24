@@ -30,5 +30,11 @@ class foodDeliveryTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testCkear(){
+        AppDataCollections.basketAmounts.append(Int(1488))
+        AppDataCollections.resetData()
+        XCTAssertEqual( AppDataCollections.basketAmounts.count == 0, true)
+    }
 
 }
