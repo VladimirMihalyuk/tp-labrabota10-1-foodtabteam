@@ -37,6 +37,9 @@ class DishMenuScreenViewController: UIViewController {
             }
         }
     }
+    @IBAction func goToBusket(_ sender: Any) {
+        self.performSegue(withIdentifier: "DishMenuScreenToOrderConfirmationScreen", sender: nil)
+    }
 }
 
 extension DishMenuScreenViewController:UICollectionViewDataSource, UICollectionViewDelegate{
