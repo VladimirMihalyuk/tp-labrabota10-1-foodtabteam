@@ -460,36 +460,12 @@
                                     <action selector="goToBusket:" destination="9tI-8R-ZbH" eventType="touchUpInside" id="mHp-Nh-caA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-Ip-Ha3" userLabel="confirmationView">
-                                <rect key="frame" x="28" y="222" width="331" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dish has been added to cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vW9-cU-zyh">
-                                        <rect key="frame" x="31" y="78" width="269" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-I7-ZBt">
-                                        <rect key="frame" x="120" y="153" width="91" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Confirm"/>
-                                        <connections>
-                                            <action selector="confirm:" destination="9tI-8R-ZbH" eventType="touchUpInside" id="5cL-bg-178"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.94322781735751293" green="0.94322781735751293" blue="0.94322781735751293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LQY-vr-hc3"/>
                     </view>
                     <connections>
                         <outlet property="additional" destination="xgU-pE-Hnw" id="NAZ-q5-U6O"/>
-                        <outlet property="confirmationView" destination="qQ0-Ip-Ha3" id="LR4-Mm-m5b"/>
                         <outlet property="cost" destination="mNC-4U-bP7" id="krg-nb-6PW"/>
                         <outlet property="count" destination="NdW-Jj-cLe" id="6Uq-XI-hNW"/>
                         <outlet property="descriptionOfDish" destination="hlo-nt-fIY" id="dAB-DE-Q19"/>
@@ -509,10 +485,13 @@
         <image name="ShoppingCart" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
 
         <segue reference="Sbi-BQ-efk"/>
 
 
+=======
+>>>>>>> Improve confirmation window
         <segue reference="rZS-1B-kGE"/>
         <segue reference="KCJ-dt-VSk"/>
 

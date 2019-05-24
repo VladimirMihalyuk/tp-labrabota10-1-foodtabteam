@@ -40,7 +40,6 @@ class DishInformationScreenViewController: UIViewController {
             additional.text = dish?.supplements
         }
     }
-    @IBOutlet weak var confirmationView: UIView!
     
     @IBOutlet weak var segment: UISegmentedControl!
     
@@ -48,10 +47,7 @@ class DishInformationScreenViewController: UIViewController {
     
     @IBOutlet weak var plusMinus: UIStepper!
     
-    @IBAction func confirm(_ sender: Any) {
-        confirmationView.isHidden = true
-        
-    }
+
     @IBAction func addToBusket(_ sender: Any) {
         
         if segment.selectedSegmentIndex == 0{
@@ -71,7 +67,9 @@ class DishInformationScreenViewController: UIViewController {
         }
         AppDataCollections.basketNames.append(dish!)
         AppDataCollections.basketAmounts.append(Int(plusMinus.value))
-        confirmationView.isHidden = false
+        let alertController = UIAlertController(title: "Success!", message: "Dish has been added to busket!", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
         self.updateViewConstraints()
     }
     
@@ -92,7 +90,7 @@ class DishInformationScreenViewController: UIViewController {
         plusMinus.value = 1
         count.text = "\(plusMinus.value)"
         dishSupplement = dish?.supplements
-        confirmationView.isHidden = true
+        
     }
     
 

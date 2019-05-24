@@ -61,6 +61,8 @@ class PaymentScreenViewController: UIViewController {
         for i in 0..<AppDataCollections.basketAmounts.count{
             resultString += AppDataCollections.basketNames[i].name! + " x" + String(AppDataCollections.basketAmounts[i]) + ", "
         }
+        resultString += telephoneField.text!
+        resultString += ", "
         resultString += restaurantName!
         resultString += ", "
         resultString += addressLabel.text!
@@ -71,8 +73,48 @@ class PaymentScreenViewController: UIViewController {
         else{
             resultString += "cash"
         }
+<<<<<<< HEAD
         //add to plist
         //delete data from collections
+=======
+        print(resultString)
+        addToPList(value: resultString)
+        viewPlist(name: "Orders")
+        AppDataCollections.resetData()
+        
+        performSegue(withIdentifier: "PaymentScreenToDishMenuScreen", sender: self)
+    }
+    
+    func addToPList(value:String?){
+        let path = Bundle.main.path(forResource: "Orders", ofType: "plist")
+        
+        let directories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as Array
+        
+        let docPath = directories[0] as String
+        let plistPath = docPath.appending("Orders.plist")
+        
+        let filemanager = FileManager.default
+        
+        if(!filemanager.fileExists(atPath: plistPath)) {
+            do{
+                try filemanager.copyItem(atPath: path!, toPath: plistPath)
+            } catch {
+                print("copy failure")
+            }
+        }
+        
+        demoDict?.setValue(value, forKey: "order")
+        
+        demoDict?.write(toFile: plistPath, atomically: true)
+        
+        
+    }
+    
+    func viewPlist(name:String?){
+        if let dict = demoDict {
+            print("plist: \(dict.value(forKey: "order") ?? "default order")")
+        }
+>>>>>>> Improve confirmation window
     }
     
 }
