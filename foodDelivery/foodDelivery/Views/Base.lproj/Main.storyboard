@@ -122,14 +122,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" text="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Nkq-RX-Ac3">
-                                <rect key="frame" x="0.0" y="64" width="298" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdK-aZ-M8B">
                                 <rect key="frame" x="308" y="62" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -177,6 +169,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7Y-up-lpH">
+                                <rect key="frame" x="0.0" y="64" width="296" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="L7X-u6-kyx" id="UTf-RX-gJi"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dJZ-Ze-I5X"/>
@@ -184,6 +184,7 @@
                     <navigationItem key="navigationItem" id="oE0-F7-Tjr"/>
                     <connections>
                         <outlet property="collectionView" destination="3bd-3Z-w4s" id="nt2-2h-gpO"/>
+                        <outlet property="searchBar" destination="p7Y-up-lpH" id="xZq-NU-zQs"/>
                         <segue destination="9tI-8R-ZbH" kind="show" identifier="DishMenuScreenToDishInformationScreen" id="faU-9X-9NG"/>
                         <segue destination="BOs-WH-pVV" kind="show" identifier="DishMenuScreenToOrderConfirmationScreen" id="Sbi-BQ-efk"/>
                     </connections>
@@ -509,10 +510,12 @@
     </resources>
     <inferredMetricsTieBreakers>
 
+        <segue reference="Sbi-BQ-efk"/>
+
+
         <segue reference="rZS-1B-kGE"/>
         <segue reference="KCJ-dt-VSk"/>
 
         <segue reference="Sbi-BQ-efk"/>
-
     </inferredMetricsTieBreakers>
 </document>
