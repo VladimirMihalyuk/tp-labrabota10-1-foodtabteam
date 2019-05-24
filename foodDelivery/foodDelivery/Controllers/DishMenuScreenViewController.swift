@@ -12,12 +12,13 @@ class DishMenuScreenViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar:UISearchBar!
+    
+    var dishSearch = [Dish]()
+    var searching = false
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDishes()
-        for dish in AppDataCollections.itemDishMenuArray{
-            print(dish.name)
-        }
         print("loaded")
         collectionView.dataSource = self as! UICollectionViewDataSource
         collectionView.delegate = self as! UICollectionViewDelegate
@@ -41,19 +42,49 @@ class DishMenuScreenViewController: UIViewController {
 extension DishMenuScreenViewController:UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath)as? MenuCollectionViewCell{
-        itemCell.dish = AppDataCollections.itemDishMenuArray[indexPath.row]
+            if searching{
+                itemCell.dish = dishSearch[indexPath.row]
+            }else{
+                itemCell.dish = AppDataCollections.itemDishMenuArray[indexPath.row]
+            }
+        
         return itemCell
         }
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppDataCollections.itemDishMenuArray.count
+        if searching{
+            return dishSearch.count
+        }else{
+            return AppDataCollections.itemDishMenuArray.count
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let dish = AppDataCollections.itemDishMenuArray[indexPath.row]
+        var dish: Dish
+        if searching{
+            dish = dishSearch[indexPath.row]
+        }else{
+            dish = AppDataCollections.itemDishMenuArray[indexPath.row]
+        }
         self.performSegue(withIdentifier: "DishMenuScreenToDishInformationScreen", sender: dish)
     }
     
+}
+
+
+extension DishMenuScreenViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        dishSearch = AppDataCollections.itemDishMenuArray.filter({$0.name!.prefix(searchText.count) == searchText})
+        searching = true
+        collectionView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        collectionView.reloadData()
+    }
 }
